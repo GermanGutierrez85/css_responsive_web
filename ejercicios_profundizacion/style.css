@@ -5,7 +5,7 @@
 }
 
 body {
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   background-image: radial-gradient(
     circle,
@@ -20,6 +20,24 @@ body {
 /* ----------- ALUMNO ----------------- */
 /* Aca debe colocar los estilos necesarios para generar el layout
  que se ve en la imagen*/
+section{
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  row-gap: 180px;
+  min-width: 380px;
+  margin: 10px;
+}
+section > div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 15px;
+  padding-bottom: 20px;
+  width: 160px;
+  height: 150px;
+}
 
 /* ------------------------------------ */
 
@@ -30,6 +48,7 @@ body {
     rgba(255, 255, 255, 1) 0%,
     rgba(168, 167, 122, 1) 100%
   );
+  color: black;
 }
 .agua {
   background: radial-gradient(
@@ -37,6 +56,7 @@ body {
     rgba(255, 255, 255, 1) 0%,
     rgba(99, 144, 240, 1) 100%
   );
+  color: black;
 }
 .fuego {
   background: radial-gradient(
@@ -44,6 +64,7 @@ body {
     rgba(255, 255, 255, 1) 0%,
     rgba(238, 129, 48, 1) 100%
   );
+  color: black;
 }
 .electricidad {
   background: radial-gradient(
@@ -51,6 +72,7 @@ body {
     rgba(255, 255, 255, 1) 0%,
     rgba(247, 208, 44, 1) 100%
   );
+  color: black;
 }
 .planta {
   background: radial-gradient(
@@ -58,6 +80,7 @@ body {
     rgba(255, 255, 255, 1) 0%,
     rgba(122, 199, 76, 1) 100%
   );
+  color: black;
 }
 .veneno {
   background: radial-gradient(
@@ -65,4 +88,18 @@ body {
     rgba(255, 255, 255, 1) 0%,
     rgb(104, 40, 90) 100%
   );
+  color: white;
+}
+@media (max-width: 740px){
+  section{
+    row-gap: 10vmin;
+    /* column-gap: 0.2vmin; */
+  }
+  
+}
+@media (max-width: 562px){
+  section{
+    row-gap: 4vmin;
+  }
+  
 }

@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 100px 1fr 1fr 120px;
+    grid-template-areas: 
+    "head head head"
+    "sidebar content chat"
+    "sidebar content chat"
+    "footer footer footer";
+    height: 100vh;
+}
+header{
+    grid-area: head;
+    background-color: #0ACD6B;
+}
+section{
+    grid-area: content;
+    background-color: #DDECE5; 
+}
+aside{
+    grid-area: sidebar;
+    background-color: #5B07AB;
+}
+div{
+    grid-area: chat;
+    background-color: #02B4D7;
+}
+footer{
+    grid-area: footer;
+    background-color: #21292A ;
+    color: white;
+}
+.boxStyles{
+    border: 1px solid black;
+    font-size: 25px;
+   text-align: center;
+   font-weight: bold;
+   padding: 30px;
+}
+
+@media (max-width: 850px) {
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 1fr);
+        grid-template-areas: 
+       "head"
+       "content"
+       "sidebar"
+       "chat"
+       "footer";
+    }
+}
